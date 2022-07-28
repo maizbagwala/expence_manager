@@ -20,7 +20,7 @@ out/
 # Gradle files
 .gradle/
 build/
-
+.idea
 # Local configuration file (sdk path, etc)
 local.properties
 
@@ -83,3 +83,4 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+.idea/misc.xml
