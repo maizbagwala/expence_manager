@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Expence Manager</string>
+    <string name="Home">My Dashboard</string>
 </resources>
