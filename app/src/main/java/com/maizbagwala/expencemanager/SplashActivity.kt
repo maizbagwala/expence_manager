@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         bar.visibility= View.VISIBLE
         val spl=Handler(Looper.getMainLooper())
         spl.postDelayed({
-            val splash= Intent(this,MainActivity::class.java)
+            val splash= Intent(this,Login::class.java)
             startActivity(splash)
             finish()
         },2000)
