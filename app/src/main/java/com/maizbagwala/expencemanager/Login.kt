@@ -2,6 +2,8 @@ package com.maizbagwala.expencemanager
 
 import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
+import android.os.Build.VERSION_CODES.S
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
@@ -61,9 +63,10 @@ class Login : AppCompatActivity() {
         val credential=GoogleAuthProvider.getCredential(account.idToken,null)
         auth.signInWithCredential(credential).addOnCompleteListener{
             if(it.isSuccessful){
-            val intent =Intent(this,ProfileActivity::class.java)
-                intent.putExtra("email",account.email)
+
+            val intent =Intent(this,MainActivity::class.java)
                 intent.putExtra("name",account.displayName)
+                intent.putExtra("email",account.email)
                 startActivity(intent)
             }else{
                 Toast.makeText(this,it.exception.toString(),Toast.LENGTH_SHORT).show()

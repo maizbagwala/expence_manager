@@ -1,6 +1,7 @@
 package com.maizbagwala.expencemanager
 
 import android.content.Intent
+import android.os.Build.VERSION_CODES.P
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -20,7 +21,8 @@ class ProfileActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.username).setText(dispname)
         findViewById<Button>(R.id.Signoutbtn).setOnClickListener{
         auth.signOut()
-            startActivity(Intent(this,Login::class.java))
+            val ptol=Intent(this,Login::class.java)
+            startActivity(ptol)
         }
     }
 }

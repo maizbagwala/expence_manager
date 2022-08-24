@@ -15,7 +15,7 @@
         android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.181" />
@@ -30,8 +30,8 @@
         android:backgroundTint="@color/white"
         android:text="@string/sign_in_with_google"
         android:textAllCaps="false"
-        android:textColor="#E1000000"
-        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:icon="@drawable/googlelogo"
         app:iconGravity="start"
         app:iconPadding="10sp"
@@ -42,5 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.978" />
 </androidx.constraintlayout.widget.ConstraintLayout>
