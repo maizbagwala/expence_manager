@@ -1,11 +1,10 @@
 package com.maizbagwala.expencemanager
 
 import android.content.Intent
-import android.os.Build.VERSION_CODES.P
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class ProfileActivity : AppCompatActivity() {
@@ -17,8 +16,8 @@ class ProfileActivity : AppCompatActivity() {
         auth=FirebaseAuth.getInstance()
         val email=intent.getStringExtra("email")
         val dispname=intent.getStringExtra("name")
-        findViewById<TextView>(R.id.emailid).setText(email)
-        findViewById<TextView>(R.id.username).setText(dispname)
+        findViewById<TextView>(R.id.emailid).text = email
+        findViewById<TextView>(R.id.username).text = dispname
         findViewById<Button>(R.id.Signoutbtn).setOnClickListener{
         auth.signOut()
             val ptol=Intent(this,Login::class.java)
