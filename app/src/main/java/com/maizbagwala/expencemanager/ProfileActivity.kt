@@ -28,6 +28,7 @@ class ProfileActivity : AppCompatActivity() {
             sharedPref.edit().clear().apply()
             val ptol=Intent(this,Login::class.java)
             startActivity(ptol)
+            finish()
         }
     }
 }
