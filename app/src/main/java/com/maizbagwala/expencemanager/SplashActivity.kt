@@ -10,30 +10,25 @@ import android.os.Looper
 import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
+import com.maizbagwala.expencemanager.utils.Const.PREF_LOGIN
+import com.maizbagwala.expencemanager.utils.Const.PREF_NAME
 
 @SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
-    private val sharedPref: SharedPreferences by lazy {
-        getSharedPreferences("Emspref", Context.MODE_PRIVATE)
-    }
+    private lateinit var sharedPref: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        val eID=sharedPref.getString("accID",null)
-        val eN=sharedPref.getString("accName",null)
-        val bar: ProgressBar=findViewById(R.id.pbar)
-        bar.visibility= View.VISIBLE
-        val spl=Handler(Looper.getMainLooper())
-        spl.postDelayed({
-            if (eID == null && eN == null) {
-                val splash = Intent(this, Login::class.java)
-                startActivity(splash)
-                finish()
-            } else{
-                val loggedin=Intent(this,MainActivity::class.java)
-                loggedin.putExtra("name",eN)
-                loggedin.putExtra("email",eID)
-                startActivity(loggedin)
-        } },2000)
+
+        sharedPref = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            if (sharedPref.getBoolean(PREF_LOGIN, false)) {
+                startActivity(Intent(this, MainActivity::class.java))
+            } else {
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
+            finish()
+        }, 2000)
     }
 }
