@@ -49,16 +49,16 @@
 
     <Button
         android:id="@+id/Prfl"
-        android:layout_width="wrap_content"
+        android:layout_width="60sp"
         android:layout_height="wrap_content"
         android:backgroundTint="#22202C"
-        android:text="Profile"
-        android:textColor="@color/fonts"
+        android:text="P"
         android:textAllCaps="false"
+        android:textColor="@color/fonts"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.038" />
 </androidx.constraintlayout.widget.ConstraintLayout>

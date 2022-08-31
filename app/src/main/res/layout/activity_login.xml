@@ -46,13 +46,13 @@
         app:icon="@drawable/googlelogo"
         app:iconGravity="start"
         app:iconPadding="10sp"
-        app:iconSize="40sp"
-        app:iconTint="@color/black"
-        app:iconTintMode="screen"
+        app:iconSize="35sp"
+        app:iconTint="@color/white"
+        app:iconTintMode="multiply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.978" />
+        app:layout_constraintVertical_bias="0.989" />
 </androidx.constraintlayout.widget.ConstraintLayout>
