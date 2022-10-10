@@ -7,8 +7,6 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.maizbagwala.expencemanager.utils.Const.PREF_LOGIN
 import com.maizbagwala.expencemanager.utils.Const.PREF_NAME

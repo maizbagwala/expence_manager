@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Expence Manager</string>
-    <string name="Home">My Dashboard</string>
+    <string name="Home">Dashboard</string>
+    <string name="selected_item">Selected item:</string>
     <string name="sign_in_with_google">Sign in with Google</string>
+    <string-array name="reminder">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Custom</item>
+    </string-array>
 </resources>

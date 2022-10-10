@@ -14,7 +14,7 @@
         android:text="Name"
         android:textColor="@color/fonts"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/Signoutbtn"
+        app:layout_constraintBottom_toTopOf="@+id/SignOutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -40,7 +40,7 @@
         android:text="Email"
         android:textColor="@color/fonts"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/Signoutbtn"
+        app:layout_constraintBottom_toTopOf="@+id/SignOutBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,22 +62,25 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <Button
-        android:id="@+id/Signoutbtn"
+        android:id="@+id/SignOutBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40sp"
-        android:layout_marginRight="40sp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/red"
+        android:layout_marginLeft="80sp"
+        android:layout_marginRight="80sp"
+        android:icon="@drawable/trash"
         android:text="Log Out"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/fonts"
         android:textSize="15sp"
+        app:iconGravity="start"
+        app:iconPadding="10sp"
+        app:iconSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.904" />
+        app:layout_constraintVertical_bias="0.907" />
 
     <ImageView
         android:id="@+id/iv_profile"

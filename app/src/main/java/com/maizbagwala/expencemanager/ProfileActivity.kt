@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -33,10 +32,10 @@ class ProfileActivity : AppCompatActivity() {
 
         Glide
             .with(this)
-            .load(sharedPref.getString(PREF_A_PHOTO, ""))
+            .load(sharedPref.getString(PREF_A_PHOTO, "")).circleCrop()
             .into(findViewById(R.id.iv_profile))
 
-        findViewById<Button>(R.id.Signoutbtn).setOnClickListener {
+        findViewById<Button>(R.id.SignOutBtn).setOnClickListener {
             sharedPref.edit().putBoolean(PREF_LOGIN, false).apply()
             startActivity(Intent(this, LoginActivity::class.java))
             finishAffinity()
